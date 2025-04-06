@@ -1,0 +1,123 @@
+{
+  "greetings": [
+    "Hello world! {kaomoji}",
+    "Good day everyone! {kaomoji}",
+    "Kaomoji of the hour! {kaomoji}",
+    "Sending good vibes {kaomoji}",
+    "Hope everyone is having a wonderful day {kaomoji}",
+    "Just dropping by to say hi {kaomoji}",
+    "Time for another kaomoji! {kaomoji}"
+  ],
+  "moods": [
+    "Feeling happy today {kaomoji}",
+    "Having a relaxing day {kaomoji}",
+    "Energetic vibes {kaomoji}",
+    "Just chilling {kaomoji}",
+    "Feeling accomplished {kaomoji}",
+    "In a playful mood {kaomoji}",
+    "Feeling shy {kaomoji}",
+    "Excited about today {kaomoji}",
+    "Feeling curious {kaomoji}"
+  ],
+  "weather": [
+    "Sunny day kaomoji {kaomoji}",
+    "Rainy day mood {kaomoji}",
+    "Cozy weather outside {kaomoji}",
+    "Perfect weather for a kaomoji {kaomoji}",
+    "Weather update: it's kaomoji season {kaomoji}",
+    "Cloudy with a chance of kaomojis {kaomoji}"
+  ],
+  "weekdays": [
+    "Monday motivation {kaomoji}",
+    "Taco Tuesday {kaomoji}",
+    "Wednesday wisdom {kaomoji}",
+    "Thursday thoughts {kaomoji}",
+    "Friday feelings {kaomoji}",
+    "Weekend vibes {kaomoji}",
+    "Sunday relaxation {kaomoji}",
+    "Monday blues? Have a kaomoji {kaomoji}",
+    "Tuesday trivia: kaomojis are Japanese emoticons {kaomoji}",
+    "Hump day kaomoji {kaomoji}",
+    "Almost Friday! {kaomoji}",
+    "TGIF! {kaomoji}",
+    "Saturday shenanigans {kaomoji}",
+    "Lazy Sunday {kaomoji}"
+  ],
+  "times": [
+    "Morning kaomoji vibes {kaomoji}",
+    "Afternoon pick-me-up {kaomoji}",
+    "Evening wind-down {kaomoji}",
+    "Late night thoughts {kaomoji}",
+    "Early bird gets the kaomoji {kaomoji}",
+    "Midnight kaomoji session {kaomoji}"
+  ],
+  "activities": [
+    "Reading with kaomojis {kaomoji}",
+    "Coding session in progress {kaomoji}",
+    "Gaming time {kaomoji}",
+    "Music appreciation {kaomoji}",
+    "Creative mode activated {kaomoji}",
+    "Coffee break kaomoji {kaomoji}",
+    "Weekend project vibes {kaomoji}"
+  ],
+  "responses": {
+    "general": [
+      "Thanks for the mention! {kaomoji}",
+      "Hello there! {kaomoji}",
+      "Nice to meet you! {kaomoji}",
+      "Thanks for reaching out {kaomoji}",
+      "Beep boop! I'm a kaomoji bot {kaomoji}",
+      "I'm honored by your mention {kaomoji}",
+      "Have a wonderful day! {kaomoji}",
+      "Thanks for interacting with me {kaomoji}",
+      "Here's a special kaomoji just for you {kaomoji}"
+    ],
+    "happy": [
+      "Glad you're happy! {kaomoji}",
+      "Happiness looks good on you! {kaomoji}",
+      "Keep smiling! {kaomoji}",
+      "Yay for happy vibes! {kaomoji}",
+      "That's wonderful to hear! {kaomoji}"
+    ],
+    "sad": [
+      "Sending virtual hugs {kaomoji}",
+      "Things will get better {kaomoji}",
+      "Here's a kaomoji to cheer you up {kaomoji}",
+      "Sorry to hear that. Hope this kaomoji helps {kaomoji}",
+      "Tomorrow is a new day {kaomoji}"
+    ],
+    "question": [
+      "Great question! {kaomoji}",
+      "Let me think about that {kaomoji}",
+      "Here's a kaomoji for your question {kaomoji}",
+      "Hmm, interesting inquiry {kaomoji}",
+      "Questions deserve kaomojis {kaomoji}"
+    ],
+    "food": [
+      "Yummy thoughts! {kaomoji}",
+      "Food kaomojis are the best {kaomoji}",
+      "Getting hungry now {kaomoji}",
+      "Bon appétit! {kaomoji}",
+      "Food makes everything better {kaomoji}"
+    ]
+  },
+  "hashtags": [
+    "#kaomoji", 
+    "#emoji", 
+    "#kawaii", 
+    "#textart", 
+    "#cute", 
+    "#emoticons", 
+    "#TwitterBot",
+    "#Japan",
+    "#ASCII",
+    "#TextFaces",
+    "#EmojiArt",
+    "#JapaneseEmoticons",
+    "#botlife",
+    "#DigitalArt",
+    "#HappyVibes",
+    "#MoodOfTheDay"
+  ],
+  "specialDays": {}
+}

@@ -1,0 +1,32 @@
+{
+  "totalTweets": 2,
+  "totalReplies": 12,
+  "totalLikes": 0,
+  "categoryStats": {
+    "happy": 8,
+    "[object Promise]": 1,
+    "sad": 6
+  },
+  "popularKaomojis": {
+    "( ͡° ͜ʖ ͡°)": 1,
+    "ヽ(´▽`)/": 2,
+    "ヾ(⌐■_■)ノ♪": 3,
+    "(๑•́ㅿ•̀๑)": 1,
+    "(╯︵╰,)": 1,
+    "(´• ᴗ •̥`)": 3,
+    "(●´∀`●)": 1,
+    "(•‿•)": 1,
+    "(｡•́︿•̀｡)": 1,
+    "(⌒‿⌒)": 1
+  },
+  "dailyTweets": {
+    "2025-04-06": 2
+  },
+  "lastUpdated": "2025-04-06T01:23:36.839Z",
+  "userInteractions": {
+    "user1": 5,
+    "user2": 3,
+    "happy_user": 8
+  },
+  "totalInteractions": 16
+}
