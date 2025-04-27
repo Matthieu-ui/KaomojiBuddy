@@ -1,27 +1,34 @@
 {
   "totalTweets": 4,
-  "totalReplies": 0,
+  "totalReplies": 2,
   "totalLikes": 0,
   "categoryStats": {
     "[object Promise]": 1,
     "love": 1,
     "surprised": 1,
-    "sleepy": 1
+    "sleepy": 1,
+    "happy": 2,
+    "sad": 1
   },
   "popularKaomojis": {
     "(っ˘̩╭╮˘̩)っ": 1,
     "(⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)♡": 1,
     "(꒪ȏ꒪)!": 1,
-    "(≧ ﹏ ≦)": 1
+    "(≧ ﹏ ≦)": 1,
+    "( ͡° ͜ʖ ͡°)": 1,
+    "(っ◞‸◟c)": 1,
+    "(｡◕‿◕｡)": 1
   },
   "dailyTweets": {
     "2025-04-27": 4
   },
-  "lastUpdated": "2025-04-27T23:08:03.115Z",
+  "lastUpdated": "2025-04-27T23:12:35.959Z",
   "userInteractions": {
-    "happy_user": 1
+    "happy_user": 1,
+    "user1": 1,
+    "user2": 1
   },
-  "totalInteractions": 1,
+  "totalInteractions": 3,
   "contentTypes": {
     "contextual": 3,
     "trending": 1
