@@ -40,10 +40,10 @@ module.exports = {
     logs: './logs', // Logs directory
   },
   
-  // Scheduling
-  postSchedule: mockMode ? '*/2 * * * *' : '0 * * * *', // More frequent in mock mode
-  interactionSchedule: '*/2 * * * *', // Check for mentions every 2 minutes
-  statsSchedule: '0 0 * * *', // Update stats daily
+  // Scheduling - Optimized for Twitter API v2 free tier (100 Posts and 500 writes per month)
+  postSchedule: mockMode ? '*/2 * * * *' : '0 12 */3 * *', // In real mode, post every 3 days at noon
+  interactionSchedule: mockMode ? '*/2 * * * *' : '0 */12 * * *', // In real mode, check mentions twice a day
+  statsSchedule: mockMode ? '0 0 * * *' : '0 0 1 * *', // In real mode, update stats once a month
   
   // Tweet settings
   maxKaomojisPerTweet: 5,

@@ -65,10 +65,10 @@ In mock mode:
 
 ## Twitter API Setup
 
-To use with a real Twitter account:
+To use with a real Twitter account (configured for Twitter API v2 free tier):
 
 1. Create a Twitter Developer Account: [Twitter Developer Portal](https://developer.twitter.com/en/portal/dashboard)
-2. Create a Project and App with Elevated access
+2. Create a Project and App with Basic access (Free tier - 100 posts and 500 writes per month)
 3. Generate API Key, API Secret, Access Token, and Access Token Secret
 4. Add these credentials to your `.env` file:
    ```
@@ -78,6 +78,16 @@ To use with a real Twitter account:
    ACCESS_TOKEN_SECRET=your_twitter_access_token_secret
    MOCK_MODE=false
    ```
+
+### Twitter API v2 Free Tier Optimizations
+
+The bot is specially configured to operate within the Twitter API v2 free tier limits:
+
+- **Reduced Posting Frequency**: Posts tweets every 3 days (instead of hourly) to stay under the 100 posts/month limit
+- **Limited API Calls**: Checks for mentions only twice a day to conserve API usage
+- **Static Hashtags**: Uses pre-defined evergreen hashtags instead of trending topics (which require elevated access)
+- **Monthly Stats**: Posts statistics only once a month instead of daily
+- **Smart Content Generation**: Creates rich contextual content with minimal API calls
 
 ## Customization
 

@@ -245,7 +245,7 @@ const twitterClient = {
     }
   },
   
-  // Get trending topics
+  // Get trending topics - Optimized for Twitter API v2 free tier
   getTrendingTopics: async (woeid = 1) => { // Default to worldwide (1)
     try {
       if (config.mockMode) {
@@ -260,10 +260,19 @@ const twitterClient = {
         logger.info('[MOCK] Fetched trending topics');
         return { data: mockTrends };
       } else {
-        // V2 endpoint for trends
-        return rateLimitHandler.withRetry(() => 
-          rwClient.v1.trendsByPlace(woeid)
-        );
+        // For Twitter API v2 with limited access, we use static evergreen hashtags
+        // The V1 trends endpoint requires Elevated access which isn't available in free tier
+        const evergreen_tags = [
+          { name: '#Kaomoji', tweet_volume: 5000 },
+          { name: '#TextFaces', tweet_volume: 4000 },
+          { name: '#Emoticons', tweet_volume: 3000 },
+          { name: '#AsciiArt', tweet_volume: 2000 },
+          { name: '#Japan', tweet_volume: 8000 }
+        ];
+        
+        // Shuffle the tags to get some variety
+        const shuffled = [...evergreen_tags].sort(() => 0.5 - Math.random());
+        return { data: shuffled.slice(0, 3) }; // Just return a few to save on tweet content length
       }
     } catch (error) {
       logger.error('Error getting trending topics:', error);
