@@ -73,7 +73,20 @@ const mockData = {
   lastProcessedMentionId: null
 };
 
-// Initialize real client if not in mock mode
+/**
+ * Initialize real Twitter client if not in mock mode
+ * 
+ * To use a real Twitter account, you need to:
+ * 1. Set MOCK_MODE=false in .env file
+ * 2. Add your Twitter API credentials in .env file:
+ *    - API_KEY: Your Twitter API Key (Consumer Key)
+ *    - API_SECRET_KEY: Your Twitter API Secret Key (Consumer Secret)
+ *    - ACCESS_TOKEN: Your Twitter Access Token
+ *    - ACCESS_TOKEN_SECRET: Your Twitter Access Token Secret
+ * 
+ * Get these credentials from the Twitter Developer Portal:
+ * https://developer.twitter.com/en/portal/dashboard
+ */
 if (!config.mockMode) {
   try {
     client = new TwitterApi({
@@ -83,8 +96,10 @@ if (!config.mockMode) {
       accessSecret: config.twitter.accessSecret,
     });
     rwClient = client.readWrite;
+    logger.info('Twitter client initialized with real API credentials');
   } catch (error) {
     logger.error('Error initializing Twitter client:', error);
+    logger.error('Please check your Twitter API credentials in .env file');
     process.exit(1);
   }
 }

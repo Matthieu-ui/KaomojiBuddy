@@ -1,18 +1,35 @@
+/**
+ * Configuration for the Kaomoji Twitter Bot
+ * 
+ * Environment variables are loaded from .env file
+ * See .env.example for the required variables
+ * 
+ * Twitter API credentials are required when MOCK_MODE=false
+ * For development without API access, set MOCK_MODE=true
+ */
 require('dotenv').config();
 
 const mockMode = process.env.MOCK_MODE === 'true';
 
 module.exports = {
   // Operating mode
+  // Set MOCK_MODE=true in .env for development without Twitter API
+  // Set MOCK_MODE=false in .env for deployment with real Twitter API
   mockMode: mockMode,
   mockDelay: 1000, // Delay in ms for mock operations to simulate API calls
   
   // Twitter API credentials
+  // These values are loaded from environment variables defined in .env
+  // For real Twitter functionality, you need to:
+  // 1. Create a Twitter Developer account
+  // 2. Create a Project & App with Elevated access
+  // 3. Generate keys and tokens
+  // 4. Add them to your .env file (see .env.example)
   twitter: {
-    appKey: process.env.API_KEY,
-    appSecret: process.env.API_SECRET_KEY,
-    accessToken: process.env.ACCESS_TOKEN,
-    accessSecret: process.env.ACCESS_TOKEN_SECRET,
+    appKey: process.env.API_KEY,         // Consumer Key from Twitter Developer Portal
+    appSecret: process.env.API_SECRET_KEY, // Consumer Secret from Twitter Developer Portal
+    accessToken: process.env.ACCESS_TOKEN, // Access Token from Twitter Developer Portal
+    accessSecret: process.env.ACCESS_TOKEN_SECRET, // Access Token Secret from Twitter Developer Portal
   },
   
   // File paths

@@ -6,10 +6,10 @@ const logger = require('../utils/logger');
 
 // Keywords to identify special command requests from users
 const COMMANDS = {
-  KAOMOJI: ['kaomoji', 'give me', 'send', 'show'],
+  KAOMOJI: ['kaomoji', 'give me', 'send me'],
   MOOD: ['happy', 'sad', 'love', 'angry', 'surprised', 'sleepy', 'food', 'excited'],
   HELP: ['help', 'how', 'what can you do', 'commands', 'features'],
-  STATS: ['stats', 'statistics', 'popular', 'favorite', 'most used']
+  STATS: ['stats', 'statistics', 'popular', 'favorite', 'most used', 'show stats', 'show me stats', 'show me your stats']
 };
 
 /**
@@ -184,14 +184,8 @@ async function processMention(mention) {
     
     let response;
     
-    // Check if it's a help request
-    if (isHelpRequest(mentionText)) {
-      const helpText = await generateHelpResponse();
-      response = await twitterClient.reply(`@${mention.author.username} ${helpText}`, mention.id);
-      logger.info(`Sent help information to @${mention.author.username}`);
-    } 
-    // Check if it's a stats request
-    else if (isStatsRequest(mentionText)) {
+    // Check if it's a stats request - check this first since it's more specific
+    if (isStatsRequest(mentionText)) {
       const popularKaomojis = await kaomojiService.getPopularKaomojis(twitterClient, 3);
       const statsText = popularKaomojis.length > 0 
         ? `Here are the most popular kaomojis: ${popularKaomojis.join(' ')} #KaomojiStats`
@@ -199,6 +193,12 @@ async function processMention(mention) {
       
       response = await twitterClient.reply(`@${mention.author.username} ${statsText}`, mention.id);
       logger.info(`Sent stats to @${mention.author.username}`);
+    }
+    // Check if it's a help request
+    else if (isHelpRequest(mentionText)) {
+      const helpText = await generateHelpResponse();
+      response = await twitterClient.reply(`@${mention.author.username} ${helpText}`, mention.id);
+      logger.info(`Sent help information to @${mention.author.username}`);
     }
     // Regular kaomoji response
     else {

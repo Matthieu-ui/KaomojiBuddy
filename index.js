@@ -1,3 +1,21 @@
+/**
+ * Kaomoji Twitter Bot 
+ * ------------------
+ * A bot that posts kaomojis and interacts with users on Twitter.
+ * 
+ * CONFIGURATION:
+ * 1. Copy .env.example to .env
+ * 2. For development/testing: keep MOCK_MODE=true (no Twitter API needed)
+ * 3. For production deployment:
+ *    - Set MOCK_MODE=false
+ *    - Add your Twitter API credentials (see .env.example for details)
+ *    - Get credentials from https://developer.twitter.com/en/portal/dashboard
+ * 
+ * RUNNING THE BOT:
+ * - npm install
+ * - npm start
+ */
+
 const schedule = require('node-schedule');
 const logger = require('./src/utils/logger');
 const tweetService = require('./src/bot/tweetService');
