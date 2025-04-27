@@ -42,7 +42,7 @@ module.exports = {
   
   // Scheduling
   postSchedule: mockMode ? '*/2 * * * *' : '0 * * * *', // More frequent in mock mode
-  interactionSchedule: mockMode ? '*/1 * * * *' : '*/15 * * * *',
+  interactionSchedule: '*/2 * * * *', // Check for mentions every 2 minutes
   statsSchedule: '0 0 * * *', // Update stats daily
   
   // Tweet settings
